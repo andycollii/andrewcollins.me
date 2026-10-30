@@ -2,487 +2,186 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<style>:root{color-scheme:light;box-sizing:border-box}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>body{margin:0}img{max-width:100%}</style>
 <title>Andrew Collins</title>
-<meta name="description" content="Andrew Collins, PhD candidate in Sociology at Stony Brook University. Research on corporate elites, campaign finance networks, and U.S. House elections.">
+<meta name="description" content="Andrew Collins, PhD candidate in Sociology at Stony Brook University. Political sociology, power structure research, and social network analysis.">
 <style>
-/* Layout: a CV-style ledger. A narrow label column of section names runs against one reading column; the masthead pairs the portrait with the name. */
+/* Layout: a 1990s faculty homepage. One plain column of Times on white, default link colors, rules between sections. Deliberately single-theme. */
 :root {
   --paper: #ffffff;
-  --surface: #ffffff;
-  --ink: #16201c;
-  --muted: #59645f;
-  --rule: #d8ddd8;
-  --rule-strong: #b6bfb9;
-  --accent: #1d5a47;
-  --accent-soft: #e1ebe5;
-
-  --display: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  --body: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  --mono: Arial, "Helvetica Neue", Helvetica, sans-serif;
-
-  --step--1: 0.8125rem;
-  --step-0: 1rem;
-  --step-1: 1.1875rem;
-  --step-2: 1.3125rem;
-  --step-3: clamp(2.6rem, 5vw + 0.75rem, 4.25rem);
-
-  --gutter: max(clamp(16px, 4vw, 40px), env(safe-area-inset-left, 0px));
-  --gutter-r: max(clamp(16px, 4vw, 40px), env(safe-area-inset-right, 0px));
+  --ink: #000000;
+  --muted: #444444;
+  --link: #0000ee;
+  --visited: #551a8b;
+  --rule: #808080;
+  --face: "Times New Roman", Times, Georgia, serif;
+  --mono: "Courier New", Courier, monospace;
+  color-scheme: light;
 }
-
-html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-
 body {
   background: var(--paper);
   color: var(--ink);
-  font-family: var(--body);
-  font-size: var(--step-0);
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
+  font-family: var(--face);
+  font-size: 17px;
+  line-height: 1.4;
 }
+.page {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding-block: 20px 28px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+a { color: var(--link); text-decoration: underline; }
+a:visited { color: var(--visited); }
+a:focus-visible { outline: 1px dotted var(--ink); outline-offset: 2px; }
+hr { border: 0; border-top: 2px groove #c0c0c0; margin: 18px 0; }
+h1 { font-size: 2em; font-weight: bold; margin: 0 0 4px; }
+h2 { font-size: 1.35em; font-weight: bold; margin: 0 0 10px; }
+p { margin: 0 0 12px; }
+ul { margin: 0 0 12px; padding-left: 28px; }
+li { margin-bottom: 8px; }
 
-.wrap {
-  max-width: 68rem;
-  margin-inline: auto;
-  padding-left: var(--gutter);
-  padding-right: var(--gutter-r);
-}
-
-a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
-a:hover { text-decoration-thickness: 2px; }
-:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
-
-h1, h2, h3 { text-wrap: balance; }
-p { margin: 0; text-wrap: pretty; }
-
-/* ---------- Top bar ---------- */
-.topbar {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 0.75rem 2rem;
-  padding-block: 1.25rem;
-}
-.mark {
-  font-family: var(--display);
-  font-size: 1.0625rem;
-  font-weight: 500;
-  color: var(--ink);
-  text-decoration: none;
-}
-.topbar nav { display: flex; flex-wrap: wrap; gap: 0.4rem 1.25rem; }
-.topbar nav a {
-  font-family: var(--mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--muted);
-  text-decoration: none;
-}
-.topbar nav a:hover { color: var(--ink); }
-
-/* ---------- Masthead ---------- */
-.masthead {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  padding-block: clamp(2rem, 6vw, 4rem) clamp(2.5rem, 6vw, 4rem);
-}
-.intro { min-width: 0; }
-.ident {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 1.25rem 1.75rem;
-}
-.ident-text { flex: 1 1 16rem; min-width: 0; }
-.portrait {
+.head { display: flex; flex-wrap: wrap; gap: 16px 20px; align-items: flex-start; }
+.head img {
   flex: none;
-  display: block;
   width: 150px;
+  height: 150px;
   max-width: 100%;
-  height: auto;
-  aspect-ratio: 1;
   object-fit: cover;
   object-position: 40% 45%;
-  padding: 4px;
-  background: var(--surface);
-  border: 1px solid var(--rule);
+  border: 2px solid var(--ink);
 }
-h1 {
-  font-family: var(--display);
-  font-size: var(--step-3);
-  font-weight: 400;
-  line-height: 1.02;
-  letter-spacing: -0.015em;
-  margin: 0;
-}
-.role {
-  margin-top: 0.85rem;
-  color: var(--muted);
-  font-size: 1.0625rem;
-}
-.lede {
-  margin-top: 1.5rem;
-  max-width: 34rem;
-  font-family: var(--display);
-  font-size: var(--step-2);
-  line-height: 1.45;
-}
-.contact-line {
-  margin-top: 1.75rem;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.6rem 0.9rem;
-}
-.email {
-  font-family: var(--mono);
-  font-size: 0.875rem;
-  color: var(--ink);
-  overflow-wrap: anywhere;
-}
-.copy {
-  font-family: var(--mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.03em;
-  color: var(--ink);
-  background: transparent;
-  border: 1px solid var(--rule-strong);
-  border-radius: 3px;
-  padding: 0.3rem 0.65rem;
-  cursor: pointer;
-}
-.copy:hover { border-color: var(--accent); color: var(--accent); }
-.profiles { margin-top: 0.9rem; display: flex; flex-wrap: wrap; gap: 0.4rem 1.5rem; }
-.contact-block .profiles { margin-top: 0; }
-.ext { font-family: var(--mono); font-size: 0.8125rem; }
-.ext::after { content: "\00a0\2197"; }
+.head-text { flex: 1 1 18rem; min-width: 0; }
+.head-text p { margin-bottom: 6px; }
+.email { font-family: var(--mono); font-size: 0.95em; overflow-wrap: anywhere; }
 
-/* ---------- Ledger rows ---------- */
-main { padding-bottom: 1rem; }
-.row {
-  display: grid;
-  grid-template-columns: 11rem minmax(0, 1fr);
-  gap: 0.75rem 3rem;
-  padding-block: 2.5rem;
-  border-top: 1px solid var(--rule);
-  scroll-margin-top: 1rem;
-}
-.label {
-  margin: 0;
-  padding-top: 0.3rem;
-  font-family: var(--mono);
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-.body {
-  min-width: 0;
-  max-width: 38rem;
-  display: grid;
-  gap: 1rem;
-}
+.nav { text-align: center; margin: 0; }
+.nav a { white-space: nowrap; }
 
-.interests {
-  list-style: none;
-  margin: 0.5rem 0 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-  gap: 0.4rem 1.5rem;
-}
-.interests li { display: flex; align-items: baseline; gap: 0.6rem; }
-.interests li::before {
-  content: "";
-  flex: none;
-  width: 6px;
-  height: 6px;
-  border: 1.25px solid var(--accent);
-  transform: translateY(-2px);
-}
+.sm { font-size: 0.9em; color: var(--muted); }
+.reply { margin: 4px 0 0; }
+.wip li b, .pubs li b { font-weight: bold; }
+.pdf { font-weight: bold; }
 
-.pill {
-  justify-self: start;
-  font-family: var(--mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.04em;
-  color: var(--accent);
-  background: var(--accent-soft);
-  border-radius: 3px;
-  padding: 0.2rem 0.55rem;
-}
+table.edu { border-collapse: collapse; margin-bottom: 12px; }
+table.edu td { padding: 2px 16px 2px 0; vertical-align: top; }
+table.edu td:first-child { font-weight: bold; white-space: nowrap; }
 
-.entries {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: 1.9rem;
-}
-.entry {
-  display: grid;
-  grid-template-columns: 7.5rem minmax(0, 1fr);
-  gap: 0.35rem 1.25rem;
-}
-.meta {
-  padding-top: 0.2rem;
-  font-family: var(--mono);
-  font-size: 0.8125rem;
-  color: var(--muted);
-  font-variant-numeric: tabular-nums;
-}
-.entry-text { min-width: 0; display: grid; gap: 0.45rem; }
-.work-title {
-  margin: 0;
-  font-family: var(--display);
-  font-size: var(--step-1);
-  font-weight: 500;
-  line-height: 1.35;
-}
-.cite .me { font-weight: 600; }
-.cite i, .reply i { font-family: var(--display); font-size: 1.05em; }
-.note { color: var(--muted); }
-.reply {
-  font-size: 0.9375rem;
-  color: var(--muted);
-  padding-left: 0.9rem;
-  border-left: 1px solid var(--rule-strong);
-}
-.cite a, .reply a { overflow-wrap: anywhere; font-family: var(--mono); font-size: 0.8125rem; }
-.cite a.pdf { margin-left: 0.6rem; font-weight: 600; white-space: nowrap; }
-
-.degree { font-family: var(--display); font-size: var(--step-1); line-height: 1.35; }
-.degree span { display: block; font-family: var(--body); font-size: var(--step-0); color: var(--muted); }
-
-.contact-block { display: grid; gap: 1.1rem; }
-address { font-style: normal; color: var(--muted); line-height: 1.55; }
-
-/* ---------- Footer ---------- */
-.foot {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 0.5rem 2rem;
-  padding-block: 1.5rem 2.5rem;
-  border-top: 1px solid var(--rule);
-  font-family: var(--mono);
-  font-size: 0.75rem;
-  color: var(--muted);
-}
-
-/* ---------- Narrow screens ---------- */
-@media (max-width: 720px) {
-  .row { grid-template-columns: minmax(0, 1fr); padding-block: 2rem; }
-  .label { padding-top: 0; }
-}
-@media (max-width: 520px) {
-  .entry { grid-template-columns: minmax(0, 1fr); }
-  .meta { padding-top: 0; }
-  .portrait { width: 112px; }
-}
+.foot { font-size: 0.85em; color: var(--muted); text-align: center; }
+.foot p { margin-bottom: 4px; }
 </style>
 </head>
 <body>
 
-<header class="topbar wrap">
-  <a class="mark" href="#top">Andrew Collins</a>
-  <nav aria-label="Sections">
-    <a href="#research">Research</a>
-    <a href="#publications">Publications</a>
-    <a href="#in-progress">In progress</a>
-    <a href="#education">Education</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+<div class="page">
 
-<section class="masthead wrap" id="top">
-  <div class="intro">
-    <div class="ident">
-      <img class="portrait" src="portrait.jpg" alt="Andrew Collins" width="507" height="484">
-      <div class="ident-text">
-        <h1>Andrew Collins</h1>
-        <p class="role">PhD Candidate in Sociology, Stony Brook University</p>
-      </div>
-    </div>
-    <p class="lede">I am a political sociologist mainly concerned with studying power and social networks. Using computational methods, I examine how elites coordinate, how institutions gain or lose public trust, and how networks of money and organizations shape social and political outcomes. In my spare time, I enjoy spending time with my cat, composing atmospheric synth music, and playing Mahjong.</p>
-    <div class="contact-line">
-      <a class="email" id="email-top" href="mailto:Andrew.Collins@stonybrook.edu">Andrew.Collins@stonybrook.edu</a>
-      <button class="copy" type="button" data-copy="email-top" aria-live="polite">Copy email</button>
-    </div>
-    <p class="profiles">
-      <a class="ext" href="https://scholar.google.com/citations?user=Lzi82LQAAAAJ&amp;hl=en">Google Scholar</a>
-      <a class="ext" href="https://www.researchgate.net/profile/Andrew-Collins-50">ResearchGate</a>
-      <a class="ext" href="https://www.stonybrook.edu/sociology/people/andrew-collins.html">Department profile</a>
-    </p>
+<div class="head" id="top">
+  <img src="portrait.jpg" alt="Andrew Collins" width="507" height="484">
+  <div class="head-text">
+    <h1>Andrew Collins</h1>
+    <p>PhD Candidate<br>Department of Sociology<br>Stony Brook University</p>
+    <p>E-mail: <span class="email">Andrew.Collins@stonybrook.edu</span></p>
+    <p><a href="https://scholar.google.com/citations?user=Lzi82LQAAAAJ&amp;hl=en">Google Scholar</a> &middot; <a href="https://www.researchgate.net/profile/Andrew-Collins-50">ResearchGate</a> &middot; <a href="https://www.stonybrook.edu/sociology/people/andrew-collins.html">Department page</a></p>
   </div>
-</section>
+</div>
 
-<main class="wrap">
-  <section class="row" id="research" aria-labelledby="h-research">
-    <h2 class="label" id="h-research">Research</h2>
-    <div class="body">
-      <p>My current research is at the intersection of political sociology and social network analysis. I use computational methods to trace the ties among corporate directors, the firms they govern, and the political campaigns they fund. This informs questions of community structure and political outcomes, especially regarding elections.</p>
-      <p>Much of my work engages a long-running debate in the study of power. In particular, I have contributed to debates about the extent to which the corporate community in the United States may be characterized as politically unified or fragmented. I have also published on how the use of artificial intelligence affects public trust in American institutions, and on the international NGO networks that promote Western democracy.</p>
-      <ul class="interests" aria-label="Research areas">
-        <li>Political sociology</li>
-        <li>Power structure research</li>
-        <li>Social network analysis</li>
-        <li>Campaign finance and elections</li>
-        <li>Computational social science</li>
-        <li>Causal inference methods</li>
-      </ul>
-    </div>
-  </section>
+<hr>
 
-  <section class="row" id="dissertation" aria-labelledby="h-diss">
-    <h2 class="label" id="h-diss">Dissertation</h2>
-    <div class="body">
-      <p>My dissertation explores whether and how America’s most connected business leaders help candidates win seats in Congress. Studies of money in politics usually treat donors as cash cows. I argue that the social networks corporate donors are embedded in may be equally valuable resources. Their ties across the corporate world let them vouch for candidates, rally other donors, and open doors that money alone cannot. I test whether this social capital helps candidates win beyond the dollar sum these donors give. In doing so, the project offers power structure research a direct test of whether elite networks translate into electoral power, and shows scholars of money in politics that who gives can matter as much as how much.</p>
-    </div>
-  </section>
+<p class="nav">[ <a href="#research">Research</a> | <a href="#dissertation">Dissertation</a> | <a href="#publications">Publications</a> | <a href="#in-progress">Works in Progress</a> | <a href="#education">Education</a> | <a href="#contact">Contact</a> ]</p>
 
-  <section class="row" id="publications" aria-labelledby="h-pubs">
-    <h2 class="label" id="h-pubs">Publications</h2>
-    <div class="body">
-      <ol class="entries">
-        <li class="entry">
-          <span class="meta">2026</span>
-          <div class="entry-text">
-            <p class="cite"><span class="me">Collins, Andrew.</span> “Fractured or Reconfigured? A Review of the Debate on U.S. Corporate Elite Unity.” <i>Sociology Compass</i> 20(3):e70181. <a href="https://doi.org/10.1111/soc4.70181">doi:10.1111/soc4.70181</a> <a class="pdf" href="papers/collins-2026-fractured-or-reconfigured.pdf">PDF</a></p>
-            <p class="note">A critique of the fractured-elite thesis, with three empirical claims in support of the corporate-dominance alternative.</p>
-            <p class="reply">Reply: Mark S. Mizruchi, “Fractured? Yes. Reconfigured? Maybe. Unified? Unlikely.” <i>Sociology Compass</i>. <a href="https://doi.org/10.1111/soc4.70237">doi:10.1111/soc4.70237</a></p>
-          </div>
-        </li>
-        <li class="entry">
-          <span class="meta">2023</span>
-          <div class="entry-text">
-            <p class="cite"><span class="me">Collins, Andrew</span>, and Jason Jeffrey Jones. “Effect of Artificial Intelligence on Social Trust in American Institutions.” <i>Journal of Social Computing</i> 4(3):221–231. <a href="https://doi.org/10.23919/JSC.2023.0022">doi:10.23919/JSC.2023.0022</a> <a class="pdf" href="papers/collins-jones-2023-ai-trust.pdf">PDF</a></p>
-            <p class="note">A survey experiment on a sample designed to mirror the U.S. population. Trust in police, companies, and hospitals fell when they were described as using AI. Government agencies were the exception and gained slightly.</p>
-          </div>
-        </li>
-        <li class="entry">
-          <span class="meta">2023</span>
-          <div class="entry-text">
-            <p class="cite">Kim, Jessica, and <span class="me">Andrew Collins</span>. “Patterns of Global Democracy Promotion: Centrality in DINGO Networks, 1981–2015.” <i>Socius</i> 9. <a href="https://doi.org/10.1177/23780231231221462">doi:10.1177/23780231231221462</a> <a class="pdf" href="papers/kim-collins-2023-dingo-networks.pdf">PDF</a></p>
-            <p class="note">Uses network centrality to trace democracy-promoting international NGO networks from 1981 to 2015. Countries became more connected overall, but ties in the civil liberties network remain unevenly distributed.</p>
-          </div>
-        </li>
-      </ol>
-    </div>
-  </section>
+<hr>
 
-  <section class="row" id="in-progress" aria-labelledby="h-wip">
-    <h2 class="label" id="h-wip">Works in progress</h2>
-    <div class="body">
-      <ol class="entries">
-        <li class="entry">
-          <span class="meta">Dissertation</span>
-          <div class="entry-text">
-            <h3 class="work-title">Corporate Elites and U.S. House Elections</h3>
-            <p class="note">Do candidates backed by America’s most connected business leaders win more often? See the dissertation section above.</p>
-          </div>
-        </li>
-        <li class="entry">
-          <span class="meta">Article</span>
-          <div class="entry-text">
-            <h3 class="work-title">Democracy for Whom? The Two Worlds of Democracy Promotion</h3>
-            <p class="cite">With Jessica Kim (shared first author) and Yeneca Lee</p>
-            <p class="note">Global networks of democracy-promoting NGOs are split between the West and the rest of the world. We show that this split also produces different ideas of what democracy means, and draw on postcolonial theory to explain why.</p>
-          </div>
-        </li>
-      </ol>
-    </div>
-  </section>
+<p>I am a political sociologist mainly concerned with studying power and social networks. Using computational methods, I examine how elites coordinate, how institutions gain or lose public trust, and how networks of money and organizations shape social and political outcomes. In my spare time, I enjoy spending time with my cat, composing atmospheric synth music, and playing Mahjong.</p>
 
-  <section class="row" id="education" aria-labelledby="h-edu">
-    <h2 class="label" id="h-edu">Education</h2>
-    <div class="body">
-      <ol class="entries">
-        <li class="entry">
-          <span class="meta">PhD</span>
-          <p class="degree">Sociology<span>Stony Brook University, in progress</span></p>
-        </li>
-        <li class="entry">
-          <span class="meta">MSc</span>
-          <p class="degree">Political Sociology<span>London School of Economics and Political Science</span></p>
-        </li>
-        <li class="entry">
-          <span class="meta">BA</span>
-          <p class="degree">Sociology<span>Clark University</span></p>
-        </li>
-        <li class="entry">
-          <span class="meta">General Course</span>
-          <p class="degree">Visiting undergraduate year<span>London School of Economics and Political Science</span></p>
-        </li>
-      </ol>
-    </div>
-  </section>
+<hr>
 
-  <section class="row" id="contact" aria-labelledby="h-contact">
-    <h2 class="label" id="h-contact">Contact</h2>
-    <div class="body contact-block">
-      <div class="contact-line" style="margin-top:0">
-        <a class="email" id="email-bottom" href="mailto:Andrew.Collins@stonybrook.edu">Andrew.Collins@stonybrook.edu</a>
-        <button class="copy" type="button" data-copy="email-bottom" aria-live="polite">Copy email</button>
-      </div>
-      <address>Department of Sociology<br>Stony Brook University<br>Stony Brook, NY 11794</address>
-      <p class="profiles">
-        <a class="ext" href="https://scholar.google.com/citations?user=Lzi82LQAAAAJ&amp;hl=en">Google Scholar</a>
-        <a class="ext" href="https://www.researchgate.net/profile/Andrew-Collins-50">ResearchGate</a>
-        <a class="ext" href="https://www.stonybrook.edu/sociology/people/andrew-collins.html">Department profile</a>
-      </p>
-      <p class="note">CV available on request.</p>
-    </div>
-  </section>
-</main>
+<h2 id="research">Research</h2>
+<p>My current research is at the intersection of political sociology and social network analysis. I use computational methods to trace the ties among corporate directors, the firms they govern, and the political campaigns they fund. This informs questions of community structure and political outcomes, especially regarding elections.</p>
+<p>Much of my work engages a long-running debate in the study of power. In particular, I have contributed to debates about the extent to which the corporate community in the United States may be characterized as politically unified or fragmented. I have also published on how the use of artificial intelligence affects public trust in American institutions, and on the international NGO networks that promote Western democracy.</p>
+<p><b>Research areas:</b></p>
+<ul>
+  <li>Political sociology</li>
+  <li>Power structure research</li>
+  <li>Social network analysis</li>
+  <li>Campaign finance and elections</li>
+  <li>Computational social science</li>
+  <li>Causal inference methods</li>
+</ul>
 
-<footer class="wrap">
-  <div class="foot">
-    <span>© 2026 Andrew Collins</span>
-    <span>Updated October 2026</span>
-  </div>
-</footer>
+<hr>
 
-<script>
-(function () {
-  var buttons = document.querySelectorAll('[data-copy]');
-  Array.prototype.forEach.call(buttons, function (btn) {
-    var original = btn.textContent;
-    function flash(msg) {
-      btn.textContent = msg;
-      clearTimeout(btn._t);
-      btn._t = setTimeout(function () { btn.textContent = original; }, 1800);
-    }
-    function selectFallback(el) {
-      try {
-        var range = document.createRange();
-        range.selectNodeContents(el);
-        var sel = window.getSelection();
-        sel.removeAllRanges();
-        sel.addRange(range);
-        flash('Selected');
-      } catch (e) { flash('Copy failed'); }
-    }
-    btn.addEventListener('click', function () {
-      var el = document.getElementById(btn.getAttribute('data-copy'));
-      if (!el) return;
-      var text = el.textContent.trim();
-      try {
-        navigator.clipboard.writeText(text).then(
-          function () { flash('Copied'); },
-          function () { selectFallback(el); }
-        );
-      } catch (e) { selectFallback(el); }
-    });
-  });
-})();
-</script>
+<h2 id="dissertation">Dissertation</h2>
+<p>My dissertation explores whether and how America’s most connected business leaders help candidates win seats in Congress. Studies of money in politics usually treat donors as cash cows. I argue that the social networks corporate donors are embedded in may be equally valuable resources. Their ties across the corporate world let them vouch for candidates, rally other donors, and open doors that money alone cannot. I test whether this social capital helps candidates win beyond the dollar sum these donors give. In doing so, the project offers power structure research a direct test of whether elite networks translate into electoral power, and shows scholars of money in politics that who gives can matter as much as how much.</p>
+
+<hr>
+
+<h2 id="publications">Publications</h2>
+<ul class="pubs">
+  <li>
+    <b>Collins, Andrew.</b> 2026. “Fractured or Reconfigured? A Review of the Debate on U.S. Corporate Elite Unity.” <i>Sociology Compass</i> 20(3):e70181.
+    [<a class="pdf" href="papers/collins-2026-fractured-or-reconfigured.pdf">PDF</a>] [<a href="https://doi.org/10.1111/soc4.70181">DOI</a>]
+    <br><span class="sm">A critique of the fractured-elite thesis, with three empirical claims in support of the corporate-dominance alternative.</span>
+    <br><span class="sm reply">See the reply by Mark S. Mizruchi, “Fractured? Yes. Reconfigured? Maybe. Unified? Unlikely.” <i>Sociology Compass</i>. [<a href="https://doi.org/10.1111/soc4.70237">DOI</a>]</span>
+  </li>
+  <li>
+    <b>Collins, Andrew</b>, and Jason Jeffrey Jones. 2023. “Effect of Artificial Intelligence on Social Trust in American Institutions.” <i>Journal of Social Computing</i> 4(3):221–231.
+    [<a class="pdf" href="papers/collins-jones-2023-ai-trust.pdf">PDF</a>] [<a href="https://doi.org/10.23919/JSC.2023.0022">DOI</a>]
+    <br><span class="sm">A survey experiment on a sample designed to mirror the U.S. population. Trust in police, companies, and hospitals fell when they were described as using AI. Government agencies were the exception and gained slightly.</span>
+  </li>
+  <li>
+    Kim, Jessica, and <b>Andrew Collins</b>. 2023. “Patterns of Global Democracy Promotion: Centrality in DINGO Networks, 1981–2015.” <i>Socius</i> 9.
+    [<a class="pdf" href="papers/kim-collins-2023-dingo-networks.pdf">PDF</a>] [<a href="https://doi.org/10.1177/23780231231221462">DOI</a>]
+    <br><span class="sm">Uses network centrality to trace democracy-promoting international NGO networks from 1981 to 2015. Countries became more connected overall, but ties in the civil liberties network remain unevenly distributed.</span>
+  </li>
+</ul>
+
+<hr>
+
+<h2 id="in-progress">Works in Progress</h2>
+<ul class="wip">
+  <li>
+    <b>Corporate Elites and U.S. House Elections</b> (dissertation).
+    <br><span class="sm">Do candidates backed by America’s most connected business leaders win more often? See the <a href="#dissertation">dissertation</a> section above.</span>
+  </li>
+  <li>
+    <b>Democracy for Whom? The Two Worlds of Democracy Promotion.</b> With Jessica Kim (shared first author) and Yeneca Lee.
+    <br><span class="sm">Global networks of democracy-promoting NGOs are split between the West and the rest of the world. We show that this split also produces different ideas of what democracy means, and draw on postcolonial theory to explain why.</span>
+  </li>
+</ul>
+
+<hr>
+
+<h2 id="education">Education</h2>
+<table class="edu">
+  <tr><td>PhD</td><td>Sociology, Stony Brook University (in progress)</td></tr>
+  <tr><td>MSc</td><td>Political Sociology, London School of Economics and Political Science</td></tr>
+  <tr><td>BA</td><td>Sociology, Clark University</td></tr>
+  <tr><td>General Course</td><td>Visiting undergraduate year, London School of Economics and Political Science</td></tr>
+</table>
+
+<hr>
+
+<h2 id="contact">Contact</h2>
+<p>
+  Andrew Collins<br>
+  Department of Sociology<br>
+  Stony Brook University<br>
+  Stony Brook, NY 11794<br>
+  E-mail: <span class="email">Andrew.Collins@stonybrook.edu</span>
+</p>
+<p>CV available on request.</p>
+
+<hr>
+
+<div class="foot">
+  <p>[ <a href="#top">Back to top</a> ]</p>
+  <p>Last updated: October 30, 2026</p>
+  <p>&copy; 2026 Andrew Collins</p>
+</div>
+
+</div>
 
 </body>
 </html>
