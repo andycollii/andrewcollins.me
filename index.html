@@ -19,17 +19,17 @@
 <main>
 <section>
   <h1>Andrew Collins</h1>
-  <p class="label">PhD Candidate &middot; Department of Sociology &middot; Stony Brook University</p>
+  <p class="label">PhD Candidate<br>Department of Sociology<br>Stony Brook University</p>
 </section>
+
+<img class="portrait" src="portrait.jpg" alt="Portrait of Andrew Collins" width="507" height="484">
 
 <section>
   <p class="lede">I am a political sociologist mainly concerned with studying power and social networks. Using computational methods, I examine how political and economic elites coordinate, how institutions gain or lose public trust, and how networks of money and organizations shape social and political outcomes. In my spare time, I enjoy spending time with my cat, composing atmospheric synth music, and playing Mahjong.</p>
   <div class="links"><a href="https://scholar.google.com/citations?user=Lzi82LQAAAAJ&amp;hl=en">Google Scholar</a><a href="https://www.researchgate.net/profile/Andrew-Collins-50">ResearchGate</a><a href="https://www.stonybrook.edu/sociology/people/andrew-collins.html">Department page</a><a href="https://github.com/andycollii">GitHub</a></div>
 </section>
 
-<section class="who">
-  <img src="portrait.jpg" alt="Portrait of Andrew Collins" width="507" height="484">
-  <div class="who-text">
+<section>
     <h2>Education</h2>
     <dl class="cv">
       <dt>PhD</dt><dd>Sociology, Stony Brook University <span class="quiet">(in progress)</span></dd>
@@ -37,17 +37,13 @@
       <dt>BA</dt><dd>Sociology, Clark University</dd>
       <dt>General Course</dt><dd>Visiting undergraduate year, London School of Economics and Political Science</dd>
     </dl>
-  </div>
 </section>
 </main>
 <footer class="foot label"><span>Last updated 1 November 2026</span><span>&copy; 2026 Andrew Collins</span></footer>
 </div>
 <style>
-.who { display: grid; grid-template-columns: 9rem minmax(0, 1fr); gap: 2rem; align-items: start; }
-.who img { width: 9rem; height: auto; aspect-ratio: 1; object-fit: cover; object-position: 40% 45%; filter: grayscale(1) contrast(1.05); transition: filter .4s; }
-.who img:hover { filter: none; }
-.who-text { min-width: 0; display: flex; flex-direction: column; gap: 1.1rem; }
-@media (max-width: 560px) { .who { grid-template-columns: minmax(0, 1fr); } }
+.portrait { display: block; width: 11rem; max-width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; object-position: 40% 45%; filter: grayscale(1) contrast(1.05); transition: filter .4s; }
+.portrait:hover { filter: none; }
 </style>
 </body>
 </html>
