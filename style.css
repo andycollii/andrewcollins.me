@@ -6,9 +6,9 @@
   --hair: #d9d9dc;
   --blue: #1f2fd1;
   --blue-ink: #ffffff;
-  --display: "Instrument Serif", "Iowan Old Style", Georgia, serif;
-  --body: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
-  --label: "IBM Plex Mono", "SFMono-Regular", Menlo, monospace;
+  --display: "Times New Roman", Times, serif;
+  --body: "Times New Roman", Times, serif;
+  --label: "Times New Roman", Times, serif;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) { --paper: #111113; --ink: #ececea; --quiet: #9a9aa3; --hair: #2c2c31; --blue: #7d88ff; --blue-ink: #0b0b0d; color-scheme: dark; }
