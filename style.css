@@ -39,7 +39,7 @@ body {
 
 .side { position: sticky; top: calc(4.5rem + env(safe-area-inset-top, 0px)); align-self: start; display: flex; flex-direction: column; gap: 2.25rem; }
 .mark { font-family: var(--display); font-size: 1.6rem; line-height: 1.05; color: var(--ink); text-decoration: none; }
-.mark i { display: block; }
+
 .nav { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.95rem; }
 .nav a { color: var(--quiet); text-decoration: none; transition: color .2s; }
 .nav a:hover { color: var(--ink); }
@@ -91,7 +91,7 @@ dl.cv dd { margin: 0; min-width: 0; }
 @media (max-width: 760px) {
   .page { grid-template-columns: minmax(0, 1fr); gap: 2.5rem; padding-block: 2.5rem 2rem; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
   .side { position: static; gap: 1.25rem; }
-  .mark i { display: inline; }
+
   .nav { flex-direction: row; flex-wrap: wrap; gap: 0.3rem 1.1rem; }
   .foot { grid-column: 1; }
   main { gap: 3rem; }
