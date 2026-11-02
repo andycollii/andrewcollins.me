@@ -2,110 +2,49 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<style>body{margin:0}img{max-width:100%}.fig { margin: 4px 0 12px; text-align: center; }
-.fig img { display: block; width: 100%; max-width: 640px; height: auto; margin: 0 auto 6px; border: 1px solid #808080; }
-.fig .sm { text-align: left; max-width: 640px; margin: 0 auto; }
-.mini { margin: 0 0 6px; }
-.nav b { font-weight: bold; }
-</style>
-<title>Personal Projects | Andrew Collins</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>body{margin:0}img{max-width:100%}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+<title>Projects | Andrew Collins</title>
+<meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Andrew Collins, PhD candidate in Sociology at Stony Brook University. Political sociology, power structure research, and social network analysis.">
-<style>
-/* Layout: a 1990s faculty homepage. One plain column of Times on white, default link colors, rules between sections. Deliberately single-theme. */
-:root {
-  --paper: #ffffff;
-  --ink: #000000;
-  --muted: #444444;
-  --link: #0000ee;
-  --visited: #551a8b;
-  --rule: #808080;
-  --face: "Times New Roman", Times, Georgia, serif;
-  --mono: "Courier New", Courier, monospace;
-  color-scheme: light;
-}
-body {
-  background: var(--paper);
-  color: var(--ink);
-  font-family: var(--face);
-  font-size: 17px;
-  line-height: 1.4;
-}
-.page {
-  max-width: 46rem;
-  margin: 0 auto;
-  padding-block: 20px 28px;
-  padding-left: max(16px, env(safe-area-inset-left, 0px));
-  padding-right: max(16px, env(safe-area-inset-right, 0px));
-}
-a { color: var(--link); text-decoration: underline; }
-a:visited { color: var(--visited); }
-a:focus-visible { outline: 1px dotted var(--ink); outline-offset: 2px; }
-hr { border: 0; border-top: 2px groove #c0c0c0; margin: 18px 0; }
-h1 { font-size: 2em; font-weight: bold; margin: 0 0 4px; }
-h2 { font-size: 1.35em; font-weight: bold; margin: 0 0 10px; }
-p { margin: 0 0 12px; }
-ul { margin: 0 0 12px; padding-left: 28px; }
-li { margin-bottom: 8px; }
-
-.head { display: flex; flex-wrap: wrap; gap: 16px 20px; align-items: flex-start; }
-.head img {
-  flex: none;
-  width: 150px;
-  height: 150px;
-  max-width: 100%;
-  object-fit: cover;
-  object-position: 40% 45%;
-  border: 2px solid var(--ink);
-}
-.head-text { flex: 1 1 18rem; min-width: 0; }
-.head-text p { margin-bottom: 6px; }
-.email { font-family: var(--mono); font-size: 0.95em; overflow-wrap: anywhere; }
-
-.nav { text-align: center; margin: 0; }
-.nav a { white-space: nowrap; }
-
-.sm { font-size: 0.9em; color: var(--muted); }
-.reply { margin: 4px 0 0; }
-.wip li b, .pubs li b { font-weight: bold; }
-.pdf { font-weight: bold; }
-
-table.edu { border-collapse: collapse; margin-bottom: 12px; }
-table.edu td { padding: 2px 16px 2px 0; vertical-align: top; }
-table.edu td:first-child { font-weight: bold; white-space: nowrap; }
-
-.foot { font-size: 0.85em; color: var(--muted); text-align: center; }
-.foot p { margin-bottom: 4px; }
-</style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400&family=Instrument+Serif:ital@0;1&display=swap"><link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="page">
-<p class="mini"><a href="index.html"><b>Andrew Collins</b></a> &middot; PhD Candidate, Sociology, Stony Brook University</p>
-
-<p class="nav">[ <a href="index.html">Home</a> | <a href="research.html">Research &amp; Publications</a> | <a href="dissertation.html">Dissertation</a> | <a href="teaching.html">Teaching</a> | <b>Personal Projects</b> | <a href="contact.html">Contact</a> ]</p>
-
-<hr>
-
-<h2>Personal Projects</h2>
-<p>Outside of research, I compose atmospheric synth music and build my own audio effect plugins. These are Audio Unit (AU) plugins for Logic Pro and other AU-compatible digital audio workstations. Both are open source on GitHub.</p>
-<ul>
-  <li>
-    <b>PolyGate Sequencer</b> [<a href="https://github.com/andycollii/PolyGate-Sequencer">GitHub</a>]
-    <br><span class="sm">A 16-step polyrhythmic gate sequencer that rhythmically ducks and mutes incoming audio, with adjustable time signatures, envelope controls, and per-step modulation.</span>
-  </li>
-  <li>
-    <b>PolyDucker</b> [<a href="https://github.com/andycollii/PolyDucker">GitHub</a>]
-    <br><span class="sm">A dual-module polyrhythmic ducking effect.</span>
-  </li>
-</ul>
-<p>Replication code for my published papers is also on <a href="https://github.com/andycollii">my GitHub page</a>.</p>
-
-<hr>
-
-<div class="foot">
-  <p>Last updated: November 1, 2026</p>
-  <p>&copy; 2026 Andrew Collins</p>
-</div>
+<header class="side">
+  <a class="mark" href="index.html">Andrew <i>Collins</i></a>
+  <nav aria-label="Site"><ul class="nav"><li><a href="index.html">Index</a></li><li><a href="research.html">Research</a></li><li><a href="dissertation.html">Dissertation</a></li><li><a href="teaching.html">Teaching</a></li><li><a href="projects.html" aria-current="page">Projects</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+  <p class="label">Sociology<br>Stony Brook University</p>
+</header>
+<main>
+<section>
+  <p class="label">Projects</p>
+  <h1>Sound, and other things</h1>
+  <p class="lede">Outside of research, I compose atmospheric synth music and build my own audio effect plugins.</p>
+  <p>These are Audio Unit (AU) plugins for Logic Pro and other AU-compatible digital audio workstations. Both are open source on GitHub.</p>
+</section>
+<section>
+  <ul class="works">
+    <li><span class="yr">2024</span><div class="body">
+      <span class="title">I AM EXOTIC</span>
+      <p class="note">A piece of ambient music, animated and interpreted by visual artist Shaowen Liang.</p>
+      <span class="acts"><a href="https://www.youtube.com/watch?v=5Bw2liCkZ20">Watch on YouTube</a></span>
+    </div></li>
+    <li><span class="yr">AU</span><div class="body">
+      <span class="title">PolyGate Sequencer</span>
+      <p class="note">A 16-step polyrhythmic gate sequencer that rhythmically ducks and mutes incoming audio, with adjustable time signatures, envelope controls, and per-step modulation.</p>
+      <span class="acts"><a href="https://github.com/andycollii/PolyGate-Sequencer">GitHub</a></span>
+    </div></li>
+    <li><span class="yr">AU</span><div class="body">
+      <span class="title">PolyDucker</span>
+      <p class="note">A dual-module polyrhythmic ducking effect.</p>
+      <span class="acts"><a href="https://github.com/andycollii/PolyDucker">GitHub</a></span>
+    </div></li>
+  </ul>
+  <p class="quiet">Replication code for my published papers is also on <a href="https://github.com/andycollii">my GitHub page</a>.</p>
+</section>
+</main>
+<footer class="foot label"><span>Last updated 1 November 2026</span><span>&copy; 2026 Andrew Collins</span></footer>
 </div>
 </body>
 </html>
