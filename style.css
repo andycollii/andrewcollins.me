@@ -103,7 +103,7 @@ dl.cv dd { margin: 0 0 0 2rem; }
 /* Index: photo beside name, title and links */
 .intro { display: flex; gap: 1.25rem; align-items: flex-start; }
 .intro h1 { margin-top: 0; }
-.intro .portrait { flex: none; width: 9rem; }
+.intro .portrait { flex: none; width: 12rem; }
 .intro + .bio { border-top: none; padding-top: 0; }
 @media (max-width: 520px) {
   .intro { flex-direction: column; gap: 0.75rem; }
