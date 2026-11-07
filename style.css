@@ -108,3 +108,10 @@ dl.cv dd { margin: 0 0 0 2rem; }
 @media (max-width: 520px) {
   .intro { flex-direction: column; gap: 0.75rem; }
 }
+
+/* Single page: sticky menu, anchored sections */
+.side { position: sticky; top: 1rem; }
+section[id] { scroll-margin-top: 1rem; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media (max-width: 760px) { .side { position: static; } }
