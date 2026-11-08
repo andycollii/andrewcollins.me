@@ -1,3 +1,8 @@
+@font-face { font-family: "EB Garamond"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts/eb-garamond-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "EB Garamond"; font-style: italic; font-weight: 400; font-display: swap; src: url("fonts/eb-garamond-latin-400-italic.woff2") format("woff2"); }
+@font-face { font-family: "EB Garamond"; font-style: normal; font-weight: 700; font-display: swap; src: url("fonts/eb-garamond-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "EB Garamond"; font-style: italic; font-weight: 700; font-display: swap; src: url("fonts/eb-garamond-latin-700-italic.woff2") format("woff2"); }
+
 /* Layout: web 1.0. Plain document flow, a bordered sidebar box like an old frameset, default-blue links, purple visited links, grooved rules. */
 :root {
   --paper: #ffffff;
@@ -8,20 +13,21 @@
   --link: #0000ee;
   --visited: #551a8b;
   --active: #ee0000;
-  --face: "Times New Roman", Times, serif;
+  --face: "EB Garamond", Garamond, "Times New Roman", Times, serif;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) { --paper: #000000; --ink: #e6e6e6; --quiet: #a8a8a8; --box: #1a1a1a; --edge: #808080; --link: #6f9cff; --visited: #c08fff; --active: #ff5a5a; color-scheme: dark; }
 }
 :root[data-theme="dark"] { --paper: #000000; --ink: #e6e6e6; --quiet: #a8a8a8; --box: #1a1a1a; --edge: #808080; --link: #6f9cff; --visited: #c08fff; --active: #ff5a5a; color-scheme: dark; }
 
+html { font-size: 18px; }
 * { box-sizing: border-box; }
 body {
   background: var(--paper);
   color: var(--ink);
   font-family: var(--face);
-  font-size: 16px;
-  line-height: 1.35;
+  font-size: 1rem;
+  line-height: 1.4;
 }
 
 .page {
