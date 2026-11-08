@@ -67,9 +67,7 @@ a:focus-visible { outline: 1px dotted var(--ink); outline-offset: 1px; }
 
 .id { display: flex; flex-direction: column; gap: 0.6rem; padding-bottom: 1rem; }
 .portrait { display: block; width: 10rem; max-width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; object-position: 40% 45%; border: 2px solid var(--ink); }
-.links { display: flex; flex-wrap: wrap; gap: 0.2rem 0; }
-.links a::before { content: "["; color: var(--ink); display: inline-block; margin-right: 0.15em; text-decoration: none; }
-.links a::after { content: "]"; color: var(--ink); display: inline-block; margin-left: 0.15em; margin-right: 0.5em; text-decoration: none; }
+.links { display: flex; flex-wrap: wrap; gap: 0.2rem 1.1rem; }
 
 /* Works: a plain bulleted list with the year in bold */
 .works { margin: 0 0 0.8rem; padding-left: 1.4rem; list-style: disc; }
