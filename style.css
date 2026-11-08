@@ -115,3 +115,7 @@ section[id] { scroll-margin-top: 1rem; }
 html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 @media (max-width: 760px) { .side { position: static; } }
+
+/* Menu: emoji in place of bullets */
+.nav { list-style: none; padding-left: 0; }
+.nav .ico { display: inline-block; width: 1.6em; }
