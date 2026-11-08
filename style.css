@@ -85,9 +85,7 @@ a:focus-visible { outline: 1px dotted var(--ink); outline-offset: 1px; }
 .works .meta, .works .note, .works .acts { display: block; margin: 0.15rem 0 0; }
 .works .note { margin: 0.15rem 0 0; }
 .works .meta { color: var(--ink); }
-.works .acts a { margin-right: 0.6em; }
-.works .acts a::before { content: "["; color: var(--ink); display: inline-block; text-decoration: none; }
-.works .acts a::after { content: "]"; color: var(--ink); display: inline-block; text-decoration: none; }
+.works .acts a { margin-right: 1em; }
 
 .tags { margin: 0 0 0.8rem; padding-left: 1.4rem; list-style: circle; }
 
